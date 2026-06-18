@@ -1,0 +1,36 @@
+# ============================================================================
+#  The Guri Woodcraft — Jekyll site config
+#  GitHub Pages builds this automatically on every push. You rarely edit here.
+# ============================================================================
+title: The Guri Woodcraft
+description: Bespoke carpentry & interiors in Jalandhar — 20+ years. We revamp, restore, and build to last.
+url: "https://theguriwoodcraft.in"
+author: Guriqbal Singh
+
+# Contact details used across the whole site (edit ONCE, used everywhere) -----
+phone: "918907180006"            # international form, no + or spaces (for wa.me / tel)
+phone_display: "+91 89071 80006" # how it shows on screen
+email: "gbunty77@yahoo.co.in"
+formspree_id: "YOUR_FORM_ID"     # paste your Formspree form id (see README)
+
+# Social links (fill once you create the handles) ----------------------------
+social:
+  instagram: ""   # e.g. https://instagram.com/theguriwoodcraft
+  youtube: ""
+  facebook: ""
+
+# Languages offered by the switcher ------------------------------------------
+languages: [en, hi, pa]
+default_lang: en
+
+# Build settings -------------------------------------------------------------
+plugins:
+  - jekyll-sitemap          # auto-generates /sitemap.xml — no manual upkeep
+  - jekyll-seo-tag          # meta/OG tags from page front-matter
+
+permalink: /blog/:title/
+sass:
+  style: compressed
+
+# Don't copy these into the built site
+exclude: [README.md, Gemfile, Gemfile.lock, vendor]

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{%- comment -%}
+  POST LAYOUT — used by every blog article. Inherits the default shell
+  (header/footer/theme/language) and adds article styling. Writers don't
+  touch this; they just write Markdown in _posts/.
+{%- endcomment -%}
+<style>
+  .article{max-width:720px;margin:0 auto;padding:120px 24px 100px}
+  .article .back{display:inline-block;font-size:14px;color:var(--grain);margin-bottom:30px}
+  .article .back:hover{color:var(--fg)}
+  .article .date{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+  .article h1{font-family:var(--d);font-weight:400;font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;margin-bottom:30px;color:var(--fg)}
+  .article h2{font-family:var(--d);font-weight:500;font-size:1.6rem;margin:42px 0 14px;color:var(--fg)}
+  .article p,.article li{color:var(--fg-soft)}
+  .article p{margin-bottom:22px}.article ul{margin:0 0 22px 22px}.article li{margin-bottom:8px}
+  .article img{width:100%;border:1px solid var(--line);border-radius:4px;margin:30px 0}
+  .article blockquote{border-left:3px solid var(--amber);padding-left:20px;margin:30px 0;font-family:var(--d);font-style:italic;font-size:1.25rem;color:var(--fg)}
+  .article .post-cta{margin-top:50px;padding:30px;border:1px solid var(--line);border-radius:6px;background:var(--bg-2)}
+  .article .post-cta a{display:inline-block;background:var(--amber);color:#fff;font-weight:600;padding:12px 24px;border-radius:999px;margin-top:8px}
+</style>
+<article class="article">
+  <a class="back" href="/blog/">&#8592; All articles</a>
+  <div class="date">{{ page.date | date: "%B %Y" }}</div>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+  <div class="post-cta">
+    <strong>Thinking about a project?</strong><br>
+    <a href="https://wa.me/{{ site.phone }}" target="_blank" rel="noopener noreferrer">{{ site.data.nav.ui.cta.en }}</a>
+  </div>
+</article>

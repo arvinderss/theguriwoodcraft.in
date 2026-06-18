@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{%- comment -%}
+  DEFAULT LAYOUT — the shell every page inherits. Header/footer/CSS/JS are
+  pulled in ONCE here, so editing them updates the whole site. Page content
+  is injected at {{ content }}.
+{%- endcomment -%}
+<html lang="{{ site.default_lang }}" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy"
+  content="default-src 'self'; img-src 'self' data: https:; media-src 'self' https:;
+           style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;
+           script-src 'self' 'unsafe-inline'; form-action https://formspree.io; frame-ancestors 'none'; base-uri 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — Bespoke Carpentry & Interiors, Jalandhar{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+{%- comment -%} prevents a flash of the wrong theme before site.js runs {%- endcomment -%}
+<script>(function(){try{var s=localStorage.getItem('tgw-theme');var l=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches;document.documentElement.setAttribute('data-theme',s||(l?'light':'dark'));var lg=localStorage.getItem('tgw-lang');if(lg)document.documentElement.setAttribute('lang',lg);}catch(e){}})();</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+{%- if page.head_extra %}{{ page.head_extra }}{%- endif %}
+{% seo %}
+</head>
+<body>
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+  <script src="/assets/js/site.js"></script>
+  {%- if page.body_extra %}{{ page.body_extra }}{%- endif %}
+</body>
+</html>

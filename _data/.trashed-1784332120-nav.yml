@@ -1,0 +1,50 @@
+# ============================================================================
+#  NAVIGATION + UI LABELS — the ONE place you edit menus and translations.
+#  Add a menu item here → it appears in the header AND footer on EVERY page,
+#  in all three languages. This is your build_nav.py equivalent, but declarative.
+#
+#  To add a page to the menu: copy a block under `menu:` and fill the three
+#  language labels + the url. To rename a menu item in Punjabi only, edit just
+#  that one `pa:` line. Nothing else to touch.
+# ============================================================================
+
+# Top navigation + footer links --------------------------------------------
+menu:
+  - url: "/#work"
+    en: "Work"
+    hi: "काम"
+    pa: "ਕੰਮ"
+  - url: "/#revamp"
+    en: "Revamp"
+    hi: "नवीनीकरण"
+    pa: "ਨਵੀਨੀਕਰਨ"
+  - url: "/#services"
+    en: "Services"
+    hi: "सेवाएँ"
+    pa: "ਸੇਵਾਵਾਂ"
+  - url: "/#story"
+    en: "About"
+    hi: "परिचय"
+    pa: "ਜਾਣ-ਪਛਾਣ"
+  - url: "/blog/"
+    en: "Journal"
+    hi: "लेख"
+    pa: "ਲੇਖ"
+  - url: "/#contact"
+    en: "Contact"
+    hi: "संपर्क"
+    pa: "ਸੰਪਰਕ"
+
+# Reusable UI strings (buttons, labels) used by header/footer/forms ----------
+ui:
+  cta:           {en: "Message on WhatsApp", hi: "व्हाट्सएप पर संदेश भेजें", pa: "ਵੱਟਸਐਪ ਤੇ ਸੁਨੇਹਾ ਭੇਜੋ"}
+  call:          {en: "Call", hi: "कॉल करें", pa: "ਕਾਲ ਕਰੋ"}
+  email:         {en: "Email", hi: "ईमेल", pa: "ਈਮੇਲ"}
+  follow:        {en: "Follow", hi: "फॉलो करें", pa: "ਫਾਲੋ ਕਰੋ"}
+  explore:       {en: "Explore", hi: "खोजें", pa: "ਖੋਜੋ"}
+  contact:       {en: "Contact", hi: "संपर्क", pa: "ਸੰਪਰਕ"}
+  tagline:       {en: "Bespoke carpentry & interiors, Jalandhar. Work that lasts decades, not seasons.",
+                  hi: "जालंधर में कस्टम बढ़ईगीरी और इंटीरियर। ऐसा काम जो दशकों चले।",
+                  pa: "ਜਲੰਧਰ ਵਿੱਚ ਕਸਟਮ ਤਰਖਾਣ ਤੇ ਇੰਟੀਰੀਅਰ। ਅਜਿਹਾ ਕੰਮ ਜੋ ਦਹਾਕਿਆਂ ਤੱਕ ਚੱਲੇ।"}
+  theme_light:   {en: "Light", hi: "लाइट", pa: "ਲਾਈਟ"}
+  theme_dark:    {en: "Dark", hi: "डार्क", pa: "ਡਾਰਕ"}
