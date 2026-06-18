@@ -16,7 +16,7 @@
   --maxw:1140px; --d:'Fraunces',Georgia,serif; --b:'Archivo',system-ui,sans-serif;
 }
 /* LIGHT palette — applied when <html data-theme="light"> */
-[data-theme="light"]{
+:root[data-theme="light"]{
   --bg:#f7f3ea; --bg-2:#efe8d9; --fg:#23190f; --fg-soft:#5c5142;
   --grain:#6f6353; --line:rgba(35,25,15,.14);
   --card:rgba(35,25,15,.03); --nav-glass:rgba(35,25,15,.07); --nav-border:rgba(35,25,15,.16);
