@@ -53,7 +53,8 @@ image: /assets/img/og-cover.jpg
 .rv-tag.b{left:16px}.rv-tag.a{right:16px;color:var(--amber-soft)}
 .rv-handle{position:absolute;top:0;bottom:0;z-index:5;width:2px;background:var(--amber);left:50%}
 .rv-handle::after{content:"\21C6";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;background:var(--amber);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
-.video-wrap{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--bg-2)}
+.video-wrap{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#000}
+.video-wrap video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#000}
 .video-ph{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(115deg,#241b13 0 16px,#1b130d 16px 32px);color:var(--grain);font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:24px}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:680px){.gallery{grid-template-columns:1fr}}
@@ -141,9 +142,10 @@ form input:focus,form textarea:focus{outline:none;border-color:var(--amber)}form
 <section class="block" id="film"><div class="wrap">
   <div class="sec-head reveal"><div class="sec-eyebrow"><span data-lang="en">In the workshop</span><span data-lang="hi">वर्कशॉप में</span><span data-lang="pa">ਵਰਕਸ਼ਾਪ ਵਿੱਚ</span></div><h2><span data-lang="en">See the work move.</span><span data-lang="hi">काम को चलते देखें।</span><span data-lang="pa">ਕੰਮ ਨੂੰ ਚੱਲਦੇ ਵੇਖੋ।</span></h2></div>
   <div class="video-wrap reveal">
-    <!-- To enable: drop video in assets/video/, remove .video-ph, uncomment <video> -->
-    <div class="video-ph">Add a video to /assets/video/ and enable the &lt;video&gt; tag</div>
-    <!-- <video controls preload="metadata" playsinline poster="/assets/img/video-poster.jpg"><source src="/assets/video/showcase.mp4" type="video/mp4"></video> -->
+    <!-- Silent workshop clip (audio removed). Muted + autoplay + loop = ambient showcase; controls let visitors pause. -->
+    <video controls muted loop autoplay playsinline preload="metadata" poster="/assets/img/video-poster.jpg">
+      <source src="/assets/video/showcase.mp4" type="video/mp4">
+    </video>
   </div>
 </div></section>
 
