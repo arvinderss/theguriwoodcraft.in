@@ -57,6 +57,9 @@
     document.querySelectorAll('[data-lang-btn]').forEach(function(b){
       b.setAttribute('aria-pressed', b.getAttribute('data-lang-btn') === l ? 'true':'false');
     });
+    // point the floating WhatsApp button at the greeting for the chosen language
+    var wa = document.getElementById('waFloat');
+    if(wa){ var u = wa.getAttribute('data-wa-' + l); if(u) wa.setAttribute('href', u); }
   }
   document.addEventListener('click', function(e){
     var b = e.target.closest('[data-lang-btn]');
