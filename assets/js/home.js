@@ -7,8 +7,8 @@
 /* ---- SET YOUR BEFORE/AFTER IMAGES HERE ----------------------------------
    Use SAME-ORIGIN paths (files in /assets/img/ of this repo). Cross-origin
    images break the canvas spotlight ("tainted canvas"). Slider is unaffected. */
-var BEFORE_IMG = "";  /* e.g. "/assets/img/bed-before.jpg" */
-var AFTER_IMG  = "";  /* e.g. "/assets/img/bed-after.jpg"  */
+var BEFORE_IMG = "/assets/img/bedroom-set.jpg";  /* until a true before/after pair exists, both point at the flagship shot so the hero looks clean, not mismatched */
+var AFTER_IMG  = "/assets/img/bedroom-set.jpg";  /* swap to the revamped image when you shoot a real before/after */
 
 (function(){
   if(BEFORE_IMG){

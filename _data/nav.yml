@@ -38,6 +38,11 @@ menu:
 # Reusable UI strings (buttons, labels) used by header/footer/forms ----------
 ui:
   cta:           {en: "Message on WhatsApp", hi: "व्हाट्सएप पर संदेश भेजें", pa: "ਵੱਟਸਐਪ ਤੇ ਸੁਨੇਹਾ ਭੇਜੋ"}
+  wa_label:      {en: "Chat with us", hi: "हमसे बात करें", pa: "ਸਾਡੇ ਨਾਲ ਗੱਲ ਕਰੋ"}
+  # Greeting pre-filled into WhatsApp when a visitor taps the floating button.
+  wa_prefill:    {en: "Hi! I found The Guri Woodcraft online and would like to discuss a project.",
+                  hi: "नमस्ते! मुझे The Guri Woodcraft ऑनलाइन मिला, मैं एक प्रोजेक्ट पर बात करना चाहता/चाहती हूँ।",
+                  pa: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਨੂੰ The Guri Woodcraft ਆਨਲਾਈਨ ਮਿਲਿਆ, ਮੈਂ ਇੱਕ ਪ੍ਰੋਜੈਕਟ ਬਾਰੇ ਗੱਲ ਕਰਨੀ ਚਾਹੁੰਦਾ ਹਾਂ।"}
   call:          {en: "Call", hi: "कॉल करें", pa: "ਕਾਲ ਕਰੋ"}
   email:         {en: "Email", hi: "ईमेल", pa: "ਈਮੇਲ"}
   follow:        {en: "Follow", hi: "फॉलो करें", pa: "ਫਾਲੋ ਕਰੋ"}
