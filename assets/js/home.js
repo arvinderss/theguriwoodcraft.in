@@ -4,20 +4,30 @@
    Shared behaviour (theme/lang/menu) is in site.js.
    ============================================================================ */
 
-/* ---- SET YOUR BEFORE/AFTER IMAGES HERE ----------------------------------
+/* ---- SET YOUR HERO + SLIDER IMAGES HERE ----------------------------------
    Use SAME-ORIGIN paths (files in /assets/img/ of this repo). Cross-origin
    images break the canvas spotlight ("tainted canvas"). Slider is unaffected. */
-var BEFORE_IMG = "/assets/img/bedroom-set.jpg";  /* until a true before/after pair exists, both point at the flagship shot so the hero looks clean, not mismatched */
-var AFTER_IMG  = "/assets/img/bedroom-set.jpg";  /* swap to the revamped image when you shoot a real before/after */
+/* Hero spotlight (top of page) — same shot both sides until a true pair exists. */
+var BEFORE_IMG = "/assets/img/bedroom-set.jpg";
+var AFTER_IMG  = "/assets/img/bedroom-set.jpg";
+/* Before/after drag slider — a real "lights off -> lights on" pair. */
+var SLIDER_BEFORE_IMG = "/assets/img/tv-wall-day.jpg";  /* lights off / daylight */
+var SLIDER_AFTER_IMG  = "/assets/img/tv-wall-lit.jpg";  /* LED lighting on        */
 
 (function(){
+  /* hero spotlight */
   if(BEFORE_IMG){
     var b=document.getElementById('heroBase'); if(b){b.style.backgroundImage="url('"+BEFORE_IMG+"')"; var t=b.querySelector('.ph-tex'),l=b.querySelector('.ph-label'); t&&t.remove(); l&&l.remove();}
-    var rb=document.getElementById('rvBefore'); if(rb){rb.style.backgroundImage="url('"+BEFORE_IMG+"')"; var t2=rb.querySelector('.ph-tex'); t2&&t2.remove();}
   }
   if(AFTER_IMG){
     var r=document.getElementById('heroReveal'); if(r){r.style.backgroundImage="url('"+AFTER_IMG+"')"; var t=r.querySelector('.ph-tex'),l=r.querySelector('.ph-label'); t&&t.remove(); l&&l.remove();}
-    var ra=document.getElementById('rvAfter'); if(ra){ra.style.backgroundImage="url('"+AFTER_IMG+"')"; var t2=ra.querySelector('.ph-tex'); t2&&t2.remove();}
+  }
+  /* before/after slider */
+  if(SLIDER_BEFORE_IMG){
+    var rb=document.getElementById('rvBefore'); if(rb){rb.style.backgroundImage="url('"+SLIDER_BEFORE_IMG+"')"; var t2=rb.querySelector('.ph-tex'); t2&&t2.remove();}
+  }
+  if(SLIDER_AFTER_IMG){
+    var ra=document.getElementById('rvAfter'); if(ra){ra.style.backgroundImage="url('"+SLIDER_AFTER_IMG+"')"; var t3=ra.querySelector('.ph-tex'); t3&&t3.remove();}
   }
 })();
 
